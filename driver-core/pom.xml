@@ -213,6 +213,7 @@
                             <artifactSet>
                                 <includes>
                                     <include>io.netty:*</include>
+                                    <include>com.google.guava:*</include>
                                 </includes>
                                 <excludes>
                                     <exclude>io.netty:netty-transport-native-epoll</exclude>
@@ -222,6 +223,10 @@
                                 <relocation>
                                     <pattern>io.netty</pattern>
                                     <shadedPattern>com.datastax.shaded.netty</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google.common</pattern>
+                                    <shadedPattern>com.datastax.shaded.google.common</shadedPattern>
                                 </relocation>
                             </relocations>
                             <transformers>
